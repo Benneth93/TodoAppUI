@@ -1,0 +1,19 @@
+
+<div>
+<p *ngIf="!todos?.length"><em>Loading...</em></p>
+    <table>
+        <th *ngFor="let todo of todos">
+                <mat-card class="todo-card">
+                    <mat-card-title class="card-title">{{todo.title}}</mat-card-title>
+                    <mat-card-content>
+                       <a class="card-text">{{todo.description}}</a>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button class="card-button" mat-button>Edit: {{todo.taskID}}</button>
+                        <button class="card-button" (click)="onDelete(todo.taskID)" mat-button>Delete</button>
+                    </mat-card-actions>
+                </mat-card>
+            </th>
+    </table>
+    <button mat-button>Add</button>
+</div>

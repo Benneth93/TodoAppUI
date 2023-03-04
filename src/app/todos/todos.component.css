@@ -1,0 +1,30 @@
+div
+{
+    margin-top: 80px;
+}
+
+.todo-card{
+    background-color: rgb(188, 187, 189);
+    padding-left: 50px;
+    padding-right: 50px;
+    border-width: 2px;
+}
+
+.card-title{
+    font-weight: bold;
+    color: black;
+    font-size: medium;
+}
+
+.card-text{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    color: black;
+}
+
+.card-button{
+    background-color: beige;
+    margin-left: 5px;
+}
+
+
