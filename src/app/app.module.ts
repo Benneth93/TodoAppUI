@@ -7,8 +7,10 @@ import { TodosComponent } from './todos/todos.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatCardModule} from '@angular/material/card'
-import {MatButton, MatButtonModule} from '@angular/material/button'
+import {MatCardModule} from '@angular/material/card';
+import {MatButton, MatButtonModule} from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
+import { CreateNewTodoDialogComponent } from './create-new-todo-dialog/create-new-todo-dialog.component';
 
 export function getBaseUrl(){
   return document.getElementsByTagName('base')[0].href;
@@ -18,7 +20,8 @@ export function getBaseUrl(){
   declarations: [
     AppComponent,
     TodosComponent,
-    DashboardComponent
+    DashboardComponent,
+    CreateNewTodoDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,8 @@ export function getBaseUrl(){
     HttpClientModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule
   ],
   providers: [{provide: 'BASE_URL', useFactory: getBaseUrl, deps:[]}],
   bootstrap: [AppComponent]
