@@ -1,5 +1,7 @@
 import { Component, Inject} from '@angular/core';
-import {HttpClient} from '@angular/common/http'
+import {HttpClient} from '@angular/common/http';
+import { MatDialog } from '@angular/material/dialog';
+import { CreateNewTodoDialogComponent } from '../create-new-todo-dialog/create-new-todo-dialog.component';
 
 @Component({
   selector: 'app-todos',
@@ -9,7 +11,7 @@ import {HttpClient} from '@angular/common/http'
 export class TodosComponent {
   public todos: Todo[] = [];
   
-  constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl: string) {
+  constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl: string, private matDialog:MatDialog) {
     http.get<Todo[]>(baseUrl + 'api/Todo/GetTasks').subscribe(result => {
       this.todos = result;
     }, error => console.error(error));
@@ -23,6 +25,18 @@ export class TodosComponent {
         window.location.reload();
     }, error => console.error(error));
   }
+
+  onStartCreate(){
+
+  }
+
+  openDialog(){
+    let dialog = this.matDialog.open(CreateNewTodoDialogComponent, {width:'400px'});
+    dialog.afterClosed().subscribe(result => {
+      console.log("closed");
+      window.location.reload;
+    });
+  }
 }
 
 interface Todo{
@@ -30,3 +44,4 @@ interface Todo{
   title: string;
   description: string;
 }
+
