@@ -13,6 +13,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {CreateNewTodoDialogComponent} from './create-new-todo-dialog/create-new-todo-dialog.component'
 import { ReactiveFormsModule ,FormsModule, NgForm} from '@angular/forms';
 import { NgFor } from '@angular/common';
+import { EditTodoDialogComponent } from './edit-todo-dialog/edit-todo-dialog.component';
 
 export function getBaseUrl(){
   return document.getElementsByTagName('base')[0].href;
@@ -24,6 +25,7 @@ export function getBaseUrl(){
     CreateNewTodoDialogComponent,
     TodosComponent,
     DashboardComponent,
+    EditTodoDialogComponent,
     
   ],
   imports: [

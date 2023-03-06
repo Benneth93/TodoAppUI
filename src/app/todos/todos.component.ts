@@ -2,6 +2,7 @@ import { Component, Inject} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { MatDialog } from '@angular/material/dialog';
 import { CreateNewTodoDialogComponent } from '../create-new-todo-dialog/create-new-todo-dialog.component';
+import { EditTodoDialogComponent } from '../edit-todo-dialog/edit-todo-dialog.component';
 
 @Component({
   selector: 'app-todos',
@@ -26,11 +27,16 @@ export class TodosComponent {
     }, error => console.error(error));
   }
 
-  onStartCreate(){
-
+  openSaveDialog(id:number, title:string, description:string){
+    let dialog = this.matDialog.open(EditTodoDialogComponent, 
+      {width:'400px', data:{'id':id, 'title':title, 'description':description}});
+      dialog.afterClosed().subscribe(result => {
+        console.log("closed");
+        window.location.reload();
+      });
   }
 
-  openDialog(){
+  openCreateDialog(){
     let dialog = this.matDialog.open(CreateNewTodoDialogComponent, {width:'400px'});
     dialog.afterClosed().subscribe(result => {
       console.log("closed");
