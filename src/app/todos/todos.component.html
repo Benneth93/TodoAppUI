@@ -9,11 +9,12 @@
                        <a class="card-text">{{todo.description}}</a>
                     </mat-card-content>
                     <mat-card-actions>
-                        <button class="card-button" mat-button>Edit: {{todo.taskID}}</button>
+                        <button class="card-button" mat-button (click)="openSaveDialog(todo.taskID, todo.title, todo.description)">Edit</button>
                         <button class="card-button" (click)="onDelete(todo.taskID)" mat-button>Delete</button>
                     </mat-card-actions>
                 </mat-card>
             </th>
     </table>
-    <button mat-button>Add</button>
+    <button mat-button class="addbutton" (click)="openCreateDialog()">Add</button>
+
 </div>

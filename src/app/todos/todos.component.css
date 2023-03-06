@@ -23,8 +23,12 @@ div
 }
 
 .card-button{
-    background-color: beige;
+    background-color: blueviolet;
     margin-left: 5px;
+}
+
+.addbutton{
+    background-color: green;
 }
 
 

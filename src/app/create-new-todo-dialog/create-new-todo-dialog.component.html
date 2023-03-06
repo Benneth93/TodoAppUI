@@ -1,0 +1,10 @@
+<div>
+    <button mat-button style="float: right" mat-dialog-close>
+        Close
+    </button>
+    <mat-dialog-content>
+        <input type="text" #newTodoTitle placeholder="enter a title">
+        <input type="text" #newDescription placeholder="enter a description"><br><br>
+        <button mat-raised-button (click)="createNewTodo(newTodoTitle.value, newDescription.value)">Save</button>
+    </mat-dialog-content>
+</div>

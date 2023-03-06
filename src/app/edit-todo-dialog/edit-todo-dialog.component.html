@@ -1,0 +1,11 @@
+<div>
+    <button mat-button style="float: right" mat-dialog-close>
+        Close
+    </button>
+    <mat-dialog-content>
+        <textarea>{{data.id}}</textarea>
+        <input type="text" #newTodoTitle placeholder="enter a title" value={{data.title}}>
+        <input type="text" #newDescription placeholder="enter a description" value={{data.description}}><br><br>
+        <button mat-raised-button (click)="Save(newTodoTitle.value, newDescription.value)">Save</button>
+    </mat-dialog-content>
+</div>
