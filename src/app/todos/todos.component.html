@@ -1,20 +1,23 @@
 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 <div>
 <p *ngIf="!todos?.length"><em>Loading...</em></p>
     <table>
         <th *ngFor="let todo of todos">
-                <mat-card class="todo-card">
-                    <mat-card-title class="card-title">{{todo.title}}</mat-card-title>
-                    <mat-card-content>
-                       <a class="card-text">{{todo.description}}</a>
-                    </mat-card-content>
-                    <mat-card-actions>
-                        <button class="card-button" mat-button (click)="openSaveDialog(todo.taskID, todo.title, todo.description)">Edit</button>
-                        <button class="card-button" (click)="onDelete(todo.taskID)" mat-button>Delete</button>
-                    </mat-card-actions>
-                </mat-card>
-            </th>
+            <mat-card class="todo-card">
+                <mat-card-title class="card-title">{{todo.title}}</mat-card-title>
+                <mat-card-content>
+                    <a class="card-text">{{todo.description}}</a>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button class="card-button" mat-raised-button color="primary" (click)="openSaveDialog(todo.taskID, todo.title, todo.description)">Edit</button>
+                    <button class="card-button" (click)="onDelete(todo.taskID)" mat-raised-button color="warn">Delete</button>
+                </mat-card-actions>
+            </mat-card>
+        </th>
+        <button class="add-btn" mat-fab (click)="openCreateDialog()">
+            <mat-icon>add</mat-icon>
+        </button>
     </table>
-    <button mat-button class="addbutton" (click)="openCreateDialog()">Add</button>
-
 </div>

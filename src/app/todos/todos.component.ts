@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import { MatDialog } from '@angular/material/dialog';
 import { CreateNewTodoDialogComponent } from '../create-new-todo-dialog/create-new-todo-dialog.component';
 import { EditTodoDialogComponent } from '../edit-todo-dialog/edit-todo-dialog.component';
+import {MatIconModule} from '@angular/material/icon'
 
 @Component({
   selector: 'app-todos',

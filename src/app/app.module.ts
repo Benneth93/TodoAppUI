@@ -14,6 +14,7 @@ import {CreateNewTodoDialogComponent} from './create-new-todo-dialog/create-new-
 import { ReactiveFormsModule ,FormsModule, NgForm} from '@angular/forms';
 import { NgFor } from '@angular/common';
 import { EditTodoDialogComponent } from './edit-todo-dialog/edit-todo-dialog.component';
+import {MatIconModule} from '@angular/material/icon';
 
 export function getBaseUrl(){
   return document.getElementsByTagName('base')[0].href;
@@ -37,7 +38,8 @@ export function getBaseUrl(){
     MatButtonModule,
     MatDialogModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatIconModule
   ],
   providers: [{provide: 'BASE_URL', useFactory: getBaseUrl, deps:[]}],
   bootstrap: [AppComponent],

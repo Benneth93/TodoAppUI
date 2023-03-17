@@ -1,19 +1,53 @@
+@keyframes slideInLeft{
+    0%{
+        transform: translateX(-350%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
 div
 {
     margin-top: 80px;
 }
 
-.todo-card{
-    background-color: rgb(188, 187, 189);
+th{
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+table th .todo-card{
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-name: slideInLeft;
+
+    background-color: #2e85ff;
     padding-left: 50px;
+    border-radius: 4px;
     padding-right: 50px;
     border-width: 2px;
+
+} 
+
+.todo-card:hover{
+    box-shadow: 0 4px 8px #020508;
 }
+
+table th:nth-child(even) .todo-card {
+    background-color: #076cf9;
+    /* add other styles here */
+  }
 
 .card-title{
     font-weight: bold;
     color: black;
     font-size: medium;
+}
+
+table th:nth-child(even) .card-title{
+    color: whitesmoke;
 }
 
 .card-text{
@@ -22,13 +56,25 @@ div
     color: black;
 }
 
+table th:nth-child(even) .card-text{
+    color: white;
+}
+
 .card-button{
-    background-color: blueviolet;
     margin-left: 5px;
 }
 
-.addbutton{
-    background-color: green;
+.add-btn{
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-name: slideInLeft;
+
+    background-color: #2e85ff ;
+    justify-content: center;
+    color: white;
+    margin-inline: 30px;
 }
+
 
 
