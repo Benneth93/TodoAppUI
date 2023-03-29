@@ -28,7 +28,7 @@ table th .todo-card{
     border-radius: 4px;
     padding-right: 50px;
     border-width: 2px;
-
+    max-width: min-content;
 } 
 
 .todo-card:hover{
