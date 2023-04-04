@@ -3,8 +3,8 @@
         Close
     </button>
     <mat-dialog-content>
-        <input type="text" #newTodoTitle placeholder="enter a title">
-        <input type="text" #newDescription placeholder="enter a description"><br><br>
-        <button mat-raised-button (click)="createNewTodo(newTodoTitle.value, newDescription.value)">Save</button>
+        <input id="todoTitleTxt" type="text" #newTodoTitle placeholder="enter a title">
+        <input id="todoDescruotuibTxt" type="text" #newDescription placeholder="enter a description"><br><br>
+        <button id="todoSaveBtn" mat-raised-button (click)="createNewTodo(newTodoTitle.value, newDescription.value)">Save</button>
     </mat-dialog-content>
 </div>

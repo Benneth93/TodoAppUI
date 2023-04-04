@@ -11,12 +11,12 @@
                     <a class="card-text">{{todo.description}}</a>
                 </mat-card-content>
                 <mat-card-actions>
-                    <button class="card-button" mat-raised-button color="primary" (click)="openSaveDialog(todo.taskID, todo.title, todo.description)">Edit</button>
-                    <button class="card-button" (click)="onDelete(todo.taskID)" mat-raised-button color="warn">Delete</button>
+                    <button id="editTodoBtn" class="card-button" mat-raised-button color="primary" (click)="openSaveDialog(todo.taskID, todo.title, todo.description)">Edit</button>
+                    <button id="deleteTodoBtn" class="card-button" (click)="onDelete(todo.taskID)" mat-raised-button color="warn">Delete</button>
                 </mat-card-actions>
             </mat-card>
         </th>
-        <button class="add-btn" mat-fab (click)="openCreateDialog()">
+        <button id="createNewTodoBtn" class="add-btn" mat-fab (click)="openCreateDialog()">
             <mat-icon>add</mat-icon>
         </button>
     </table>

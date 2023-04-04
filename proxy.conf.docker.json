@@ -1,6 +1,6 @@
 {
   "/api/*":{
-    "target": "http://172.17.0.3:5192",
+    "target": "http://dockerdevenv-todoapi-1:5192",
     "secure": false,
     "logLevel": "debug"
   }
