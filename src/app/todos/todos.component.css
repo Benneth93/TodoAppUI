@@ -60,7 +60,11 @@ table th:nth-child(even) .card-text{
     color: white;
 }
 
-.card-button{
+.card-edit-button{
+    margin-left: 5px;
+}
+
+.card-delete-button{
     margin-left: 5px;
 }
 

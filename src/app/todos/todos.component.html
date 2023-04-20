@@ -11,8 +11,8 @@
                     <a class="card-text">{{todo.description}}</a>
                 </mat-card-content>
                 <mat-card-actions>
-                    <button id="editTodoBtn" class="card-button" mat-raised-button color="primary" (click)="openSaveDialog(todo.taskID, todo.title, todo.description)">Edit</button>
-                    <button id="deleteTodoBtn" class="card-button" (click)="onDelete(todo.taskID)" mat-raised-button color="warn">Delete</button>
+                    <button id="editTodoBtn" class="card-edit-button" mat-raised-button color="primary" (click)="openSaveDialog(todo.taskID, todo.title, todo.description)">Edit</button>
+                    <button id="deleteTodoBtn" class="card-delete-button" (click)="onDelete(todo.taskID)" mat-raised-button color="warn">Delete</button>
                 </mat-card-actions>
             </mat-card>
         </th>
