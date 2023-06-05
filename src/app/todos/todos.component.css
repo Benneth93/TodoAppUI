@@ -18,7 +18,7 @@ th{
 }
 
 table th .todo-card{
-    animation-duration: 1s;
+    animation-duration: 90ms;
     animation-timing-function: ease-in;
     animation-delay: 0s;
     animation-name: slideInLeft;
@@ -69,10 +69,11 @@ table th:nth-child(even) .card-text{
 }
 
 .add-btn{
-    animation-duration: 1s;
+    animation-duration: 100ms;
     animation-timing-function: ease-in;
     animation-delay: 0s;
     animation-name: slideInLeft;
+
 
     background-color: #2e85ff ;
     justify-content: center;
